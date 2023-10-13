@@ -13,7 +13,7 @@ test('1. SignIn Succeed test (with some pom comlexity)', async ({ page }) => {
     // await loginPage.signInToApp(); // some or all inputs empty -> method will use relevant pre-defined defaults (as stated)
     await loginPage.signInToApp(ApplicationProperties.URL_LOGIN,); // with only url - below (next test) show with error_user !
     await loginPage.validatePageUrl(`${ApplicationProperties.URL_LOGIN}/inventory.html`); // validate SignIn was successful !!
-    await loginPage.delay(2000);
+    await loginPage.delay(1000);
     console.log('end test')
     }
 );
@@ -24,7 +24,7 @@ test('2. SignIn Failed test (with some pom comlexity)', async ({ page }) => {
     console.log('start test')
     await loginPage.signInToApp(ApplicationProperties.URL_LOGIN,LoginCredentials.USER_LOCKED);
     await loginPage.validatePageUrl(ApplicationProperties.URL_LOGIN); // validate SignIn Failed - we are still on LoginPage !!
-    await loginPage.delay(2000);
+    await loginPage.delay(1000);
     console.log('end test')
     }
 );
