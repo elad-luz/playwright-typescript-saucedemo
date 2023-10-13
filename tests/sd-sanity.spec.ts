@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 
-test('test', async ({ page }) => {
+
+test('0. Login & AddItem test (with-out comlexity)', async ({ page }) => {
   await page.goto('https://www.saucedemo.com');
   
  // Expect LI page title "to contain" a substring
@@ -17,4 +18,5 @@ test('test', async ({ page }) => {
   await page.locator('[data-test="add-to-cart-sauce-labs-backpack"]').click();
   await page.locator('[data-test="add-to-cart-sauce-labs-bike-light"]').click();
   await page.locator('a').filter({hasText: '2'}).click();
+  
 });
