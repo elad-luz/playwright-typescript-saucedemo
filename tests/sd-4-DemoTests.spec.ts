@@ -11,7 +11,7 @@ test.describe('SignIn & Add 2 Products - DEMO', async () => {
     test.beforeEach(async ({ page }) => {
         loginPage = new LoginPage(page);
         productsInventoryPage = new ProductsInventoryPage(page);
-    })
+    });
 
     test('SignIn and Add (with more pom comlexity & products page', async ({ page }) => {
         console.log('start DEMO test');
@@ -23,5 +23,5 @@ test.describe('SignIn & Add 2 Products - DEMO', async () => {
         await page.locator('a').filter({ hasText: '2' }).click(); // cart should be in Common page!
         await loginPage.delay(2500);
         console.log('end test');
-    })
+    });
 });
